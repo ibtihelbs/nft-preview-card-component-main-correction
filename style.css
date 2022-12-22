@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    /*### Primary*/
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+   /*### Neutral */
+   --Bg-main: hsl(217, 54%, 11%);
+   --Bg-card: hsl(216, 50%, 16%);
+   --Line: hsl(215, 32%, 27%);
+   --White: hsl(0, 0%, 100%);
+   --border-radius: 10px;
+}
+body{
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--Bg-main);
+    /*! position: relative; */
+}
+.margin-top{
+    margin-top: 10px;
+}
+#container{
+    background-color: var(--Bg-card);
+    width: 300px;
+    position: absolute;
+    /*! left: 50%; */
+    padding: 1.5rem;
+    /*! transform: translate(-50%,-50%); */
+    border-radius: var(--border-radius);
+    /*! margin-top: 50%; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.thumbnail{
+    width: 100%;
+    border-radius: var(--border-radius)
+}
+
+h3{
+    color: var(--White);
+}
+p, span:nth-child(2){
+   color: var(--Soft-blue);
+   font-weight: 200;
+   /*! height: 100px; */
+   position: relative;
+}
+#nft-info span:first-child{
+    color: var(--Cyan);
+}
+#nft-info span:first-child::before{
+    content: url(./images/icon-ethereum.svg);
+}
+#nft-info {
+  position: relative;
+}
+#nft-info span:nth-child(2){
+  position: absolute;
+  right: 0;
+}
+span:nth-child(2)::before{
+    content: url(./images/icon-clock.svg);
+}
+#create::before{
+    height: 30px;
+    width: 30px;
+    content: "";
+    background-color: var(--White);
+    display: inline-block;
+    background-image: url(./images/image-avatar.png);
+    background-size: 90%;
+    padding: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    transform: translateY(50%);
+    margin-right: 10px;
+}
+#create span{
+    color: var(--White);
+}
+#create{
+    /*! background-color: red; */ 
+    vertical-align: middle;
+    display: inline;
+}
+.attribution{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    /*! background-color: pink; */
+    width: 100%;
+}
